@@ -1,0 +1,119 @@
+.personalMain{
+  border: 0px solid #EDEEF2;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 345px;
+}
+.pTitle{
+  width: 100%;
+  color: #2B2B43;
+  font-size: 18px;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.10px;
+  word-wrap: break-word
+}
+.imagAvatar{
+  width: 88px;
+  height: 88px;
+  margin-right: 24px;
+  border-radius: 8px;
+}
+.changeButton{
+  border: 1px solid #4e60ff;
+  background-color: white;
+  color: #4e60ff;
+  border-radius: 8px;
+  width: 83px;
+  height: 44px;
+  margin-top: 40px;
+}
+.removeButton{
+  border: 0px;
+  margin-left: 16px;
+  background-color: white;
+  border-radius: 8px;
+  width: 83px;
+  height: 44px;
+  margin-top: 40px;
+  color:#83859C;
+  ;
+}
+.labelInfo{
+width: 341px;
+height: 16px;
+  color: #545563;
+  font-size: 12px;
+  font-family: Nunito;
+  font-weight: 600;
+  line-height: 16px;
+  word-wrap: break-word;
+}
+.input1{
+  width: 341px;
+height: 44px;
+border: 1px solid #C7C8D2;
+border-radius: 8px;
+}
+.emailLabel{
+color: #2B2B43;
+font-size: 18px;
+font-family: Nunito;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0.10px;
+word-wrap: break-word
+}
+
+.lebalCheck{
+
+width: 309px;
+height: 20px;
+color: #2B2B43;
+ font-size: 14px;
+ font-family: Nunito;
+ font-weight: 400;
+ line-height: 20px;
+ letter-spacing: 0.10px;
+ word-wrap: break-word;
+}
+
+
+.logoutButton{
+width: 84px;
+height: 44px;
+margin-right: 5px;
+border: 1px solid #FF5C60;
+color: #FF5C60;
+border-radius: 9px;
+background-color: #ffffff;
+}
+.logoutButton:hover{
+  background-color: #ff5c60;
+  color: #ffffff;
+}
+.discardChangesButton{
+
+width: 143px;
+height: 44px;
+border: 1px solid #83859C;
+border-radius: 8px;
+color: #83859C;
+background-color: #ffffff;
+}
+.saveChangeButton{
+margin-top: 5px;
+  width: 143px;
+  height: 44px;
+  border: 1px solid #4E60FF;
+  border-radius: 8px;
+  color:#ffffff;
+  background-color: #4E60FF;
+}
+.page1{
+  direction: ltr;
+ }
+ .page2{
+   direction: rtl;
+ }

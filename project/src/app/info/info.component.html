@@ -1,0 +1,73 @@
+<div class="personalMain" >
+  <p class="Ptitle">Personal information</p>
+  <div style="color: #545563; font-size: 12px; font-family: Nunito; font-weight: 600; line-height: 16px; word-wrap: break-word">Avatar</div>
+  <!-- <div style="display: flex; flex-wrap: wrap; margin-top: 8px;">
+    <img class="imagAvatar" src="../../assets/images/profile-round-1342-svgrepo-com.svg" alt="">
+    <button class="changeButton"> Change</button>
+    <button class="removeButton">Remove</button>
+  </div> -->
+  <form style="margin-top: 16px;">
+    <div class="row">
+      <div class="col">
+        <label class="labelInfo" for="name">Name</label>
+        <br>
+        <input class="input1" type="text" name="name" [(ngModel)]="users.name">
+      </div>
+      <div class="col">
+        <label class="labelInfo" for="email">Email</label>
+        <br>
+        <input class="input1" type="text" name="email" [(ngModel)]="users.email">
+      </div>
+    </div>
+    <div class="row" style="margin-top: 32px;">
+      <div class="col">
+        <label class="labelInfo" for="phone">Phone</label>
+        <br>
+        <input class="input1" type="text" name="phone" [(ngModel)]="users.phone">
+      </div>
+      <div class="col">
+        <label class="labelInfo" for="password">Password</label>
+        <br>
+        <input class="input1" type="password" name="password" [(ngModel)]="users.password">
+      </div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 5px; margin-top: 10px;">
+      <div style="margin-top: 5px;">
+        <button class="logoutButton" [routerLink]="['/logIn']" (click)="logOut()">Log Out</button>
+        <button class="discardChangesButton">Discard Changes</button>
+      </div>
+      <button class="saveChangeButton"    data-bs-toggle="modal" data-bs-target="#myModal">Save Changes</button>
+
+      <div class="modal" tabindex="-1" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Password change</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="updateUser(users.password)">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </form>
+<!-- <div id="toasts1"  class="toast show">
+  <div class="toast-header">
+    <strong class="me-auto">Toast Header</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+  </div>
+  <div class="toast-body">
+    <p>Some text inside the toast body</p>
+  </div>
+</div> -->
+
+</div>

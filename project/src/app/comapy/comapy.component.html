@@ -1,0 +1,46 @@
+<div style="display: flex; flex-direction: column; justify-content: center;">
+
+
+<div style="display: flex; justify-content: space-around; align-items: center;" >
+  <h2>Company</h2>
+  <form action="">
+    <input type="text" placeholder="Company Name" style="height: 48px; border-radius: 8px; " (input)="onSearchInput($event)">
+  </form>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin-top: 3%; align-items: center;" >
+<div class="companyCard" *ngFor="let i of arrayCompany">
+  <p style="font-size: 18px;">Company:  <span style="font-size: 16px;">{{i.name}}</span></p>
+  <p style="font-size: 18px;">location: <span style="font-size: 16px;">{{i.location}}</span></p>
+  <button style="border-radius: 8px;" data-bs-toggle="modal" attr.data-bs-target="#exampleModal{{i.company_id}}">View Details </button>
+
+  <div class="modal fade" [id]="'exampleModal'+i.company_id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Company Detail</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body modal-dialog modal-dialog-scrollable info">
+          <p style="font-size: 24px; font-family:'Arial Narrow Bold';">Details: </p>
+          <div >
+          <p>Name: <span class="spa">{{i.name}}</span></p>
+          <hr>
+          <p>Location: <span class="spa">{{i.location}}</span></p>
+          <hr>
+          <p>Phone: <span class="spa">{{i.phone}}</span></p>
+          <hr>
+          <p>email: <span class="spa">{{i.email}}</span></p>
+          <hr>
+
+         </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,53 @@
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+  <img id="img1" src="../../assets/images/OJXL4E0.jpg" alt="" style="height: 860px; width: 750px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 10%; margin-right: 15%;">
+  <div class="personalMain">
+    <h1>Register</h1>
+   <form [formGroup]="myForm" (ngSubmit)="onSubmit()"  class="main">
+     <!-- <label for=""><h2>Job</h2></label> -->
+   <div class="row">
+   <div >
+     <label  for="">name</label>
+     <br>
+     <input class="input1" type="text" formControlName="name">
+   </div>
+   <div >
+     <label for="">phone</label>
+     <br>
+     <input class="input1" type="text" formControlName="phone">
+   </div>
+   </div>
+   <div class="row">
+     <div >
+       <label for="">email</label>
+       <br>
+       <input class="input1" type="text" formControlName="email">
+     </div>
+     <div >
+       <label for="">password</label>
+       <br>
+       <input class="input1" type="password" formControlName="password">
+     </div>
+     </div>
+     <div class="row">
+      <div class="col">
+        <label for="">Location</label>
+        <br>
+        <input class="input1"  formControlName="location">
+      </div>
+      </div>
+
+
+   <div class="row" style="margin-top: 10px;">
+     <div class="col">
+       <button class="discardChangesButton" style="width: 72px;" (click)="goBack()">Back</button>
+     </div>
+   <div class="col">
+     <button class="saveChangeButton" type="submit"  style="width: 72px; margin-top: 5px; margin-bottom: 5px;">Submit</button>
+   </div>
+
+   </div>
+   </form>
+   </div>
+  </div>
+</div>

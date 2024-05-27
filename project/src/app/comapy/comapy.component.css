@@ -1,0 +1,18 @@
+.companyCard{
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  min-width: 300px;
+  border-radius: 16px;
+  box-shadow: 2px 2px 2px 2px black;
+  margin-top: 3%;
+ 
+}
+p{
+  margin-top: 10px;
+}
+button{
+  margin-bottom: 20px;
+}

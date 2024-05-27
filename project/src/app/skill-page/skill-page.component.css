@@ -1,0 +1,83 @@
+.input1{
+  background-color: #F5F5F5;
+  width: 200px;
+  height: 50px;
+  max-width: 470px;
+  border-radius: 4px;
+  border: 0px;
+  }
+  .label1{
+   color: rgb(104, 100, 100);
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    max-width: 400px;
+  }
+  .row{
+    max-width: 470px;
+  }
+  .title{
+    color: black;
+  font-size: 36px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 1.44px;
+  word-wrap: break-word;
+  }
+  .div1{
+    margin-top: 32px;
+    height: 70px;
+  }
+  .div2{
+    height: 70px;
+  }
+  .label2{
+    margin-left: 16px;
+  color: black;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word
+  }
+  .input2{
+    width: 24px;
+    height: 24px;
+    border: 0px;
+    background-color: #DB4444;
+
+  }
+  .form1{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+  }
+  @media (max-width:400px) {
+  .form1{
+    margin-left: 2%;
+  }
+
+  }
+
+  .invalid {
+    border: 1px solid #DB4444; /* Red border for invalid input */
+  }
+
+  .error-message {
+    color: #DB4444; /* Red text color for error messages */
+    font-size: 12px;
+    margin-top: 5px;
+  max-width: 400px;
+  }
+  .bt1{
+    border: 0px;
+    border-radius: 8px;
+    align-self: self-end;
+   margin: 4%;
+  }

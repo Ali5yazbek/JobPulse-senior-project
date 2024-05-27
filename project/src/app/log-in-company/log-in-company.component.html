@@ -1,0 +1,29 @@
+
+<div   style="display: flex; justify-content: space-between;">
+  <div class="logMain" style="align-self: center;">
+    <!-- <img class="logo1" src="../../assets/images/job-work-svgrepo-com (1).svg" alt=""> -->
+    <div><h1 class="logoText">Login as: </h1>  <button (click)="moveToCompany()" class="moving">company</button> <button class="moving" (click)="moveToUser()">user</button></div>
+    <p class="textLog">Sign in with your data that you entered during your registration </p>
+    <form action="">
+      <div class="EP">
+        <label id="l1" for="">email</label>
+        <br>
+        <input class="inputLog" type="text" name="email" [(ngModel)]="user.email" required>
+      </div>
+      <div class="EP">
+        <label id="l1"  for="">password</label>
+        <br>
+        <input class="inputLog" type="password" name="password" [(ngModel)]="user.password">
+      </div>
+
+    <button type="submit" (click)="log()">Login</button>
+    <div *ngIf="check" ><p class="error-message">Incorrect email or password</p></div>
+   <a id="forgetLink" [routerLink]="['/registerCompany']">Register</a>
+    </form>
+
+  </div>
+  <div class="col-md-8 col-sm-12 decoret">
+    <img id="img1" src="../../assets/images/5f9c9b86740569d1a4ca2c4e.jpg" alt="" style="height: 860px; width: 1500px;">
+  </div>
+
+</div>

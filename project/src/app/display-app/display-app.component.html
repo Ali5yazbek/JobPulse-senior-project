@@ -1,0 +1,106 @@
+<app-nav-company></app-nav-company>
+<div style="display: flex; justify-content: center;  align-items: center;">
+  <table class="table" style="width: 80%">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <!-- <th scope="col">Status</th> -->
+        <th scope="col">Applied Date</th>
+        <th scopre="col">Job name</th>
+        <th scope="col">user name</th>
+        <th scope="col">phone</th>
+        <th scope="col">email</th>
+        <th scope="col">Description</th>
+        <th scope="col">view Skill</th>
+        <th scope="col">Approve</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of application">
+        <th scope="row">{{i.application_id}}</th>
+        <!-- <td>{{i.status}}</td> -->
+        <td>{{i.appliedDate}}</td>
+        <td>{{i.jobName}}</td>
+        <td>{{i.userName}}</td>
+        <td>{{i.phone}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.Description}}</td>
+        <td><button data-bs-toggle="modal"  [attr.data-bs-target]="'#myModal' + i.id" (click)="showUser(i.user_id,i.email)">View</button>
+
+          <div class="modal" [id]="'myModal'+i.id">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Skills: </h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <div *ngFor="let i of skills">
+                    <p>{{i.name}}: <span class="spam">{{i.level}}</span></p>
+                    <hr>
+                      </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </td>
+        <td><button data-bs-toggle="modal"  [attr.data-bs-target]="'#myModalAccept' + i.id" (click)="switchE(i.email)">Accept</button><button data-bs-toggle="modal"  [attr.data-bs-target]="'#myModalDelete' + i.id">Reject</button>
+
+          <div class="modal" [id]="'myModalAccept'+i.id">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Are you sure?</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <h2 class="fs-5">Accept for interview</h2>
+                  <input class="input1" type="text" [(ngModel)]="user.email">
+                  <hr>
+                <p>subject</p>
+                <input class="input1" type="text" [(ngModel)]="user.subject">
+                <p>Text</p>
+                <input class="input1" type="text" [(ngModel)]="user.text">
+              </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="updateApply(i.application_id)">Yes</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" [id]="'myModalDelete'+i.id">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Are you sure?</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  Delete this application
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="deleteApply(i.application_id)">Yes</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </td>
+
+      </tr>
+
+
+
+    </tbody>
+  </table>
+
+</div>

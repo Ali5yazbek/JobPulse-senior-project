@@ -1,0 +1,14 @@
+.info p{
+  font-size: 20px;
+
+}
+.spa{
+  font-size: 16px;
+  color: rgb(104, 101, 101);
+}
+
+.card{
+  border: 0px;
+  border-radius: 16px;
+  background-color: rgb(247, 247, 247);
+}

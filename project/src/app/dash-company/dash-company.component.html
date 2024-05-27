@@ -1,0 +1,32 @@
+<app-nav-company></app-nav-company>
+<div>
+  <img src="../../assets/images/company-overview-2c.jpg" height="300px" width="100%" alt="">
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 30px; width: 90%; margin-left: 5%;">
+  <h1 style="align-self: self-start; margin-bottom: 2%;">Your Jobs : </h1>
+  <table class="table table-success table-primay" style="border-radius: 8px;">
+    <thead>
+      <tr>
+        <th scope="col">#ID</th>
+        <th scope="col">job name</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Status</th>
+        <th scope="col">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of jobs">
+        <th scope="row">{{i.job_id}}</th>
+        <td>{{i.title}}</td>
+        <td>{{i.salary}} $</td>
+        <td><p *ngIf="i.status === 0; else acceptedStatus">Waiting </p>
+<ng-template #acceptedStatus><p>Accepted</p></ng-template>
+
+        </td>
+        <td><button class="btn" style="border: 0px; border-radius: 8px;" (click)="delete(i.job_id)"><svg width="24px" height="24px" viewBox="0 0 1024 1024" fill="#000000" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M32 241.6c-11.2 0-20-8.8-20-20s8.8-20 20-20l940 1.6c11.2 0 20 8.8 20 20s-8.8 20-20 20L32 241.6zM186.4 282.4c0-11.2 8.8-20 20-20s20 8.8 20 20v688.8l585.6-6.4V289.6c0-11.2 8.8-20 20-20s20 8.8 20 20v716.8l-666.4 7.2V282.4z" fill="" /><path d="M682.4 867.2c-11.2 0-20-8.8-20-20V372c0-11.2 8.8-20 20-20s20 8.8 20 20v475.2c0.8 11.2-8.8 20-20 20zM367.2 867.2c-11.2 0-20-8.8-20-20V372c0-11.2 8.8-20 20-20s20 8.8 20 20v475.2c0.8 11.2-8.8 20-20 20zM524.8 867.2c-11.2 0-20-8.8-20-20V372c0-11.2 8.8-20 20-20s20 8.8 20 20v475.2c0.8 11.2-8.8 20-20 20zM655.2 213.6v-48.8c0-17.6-14.4-32-32-32H418.4c-18.4 0-32 14.4-32 32.8V208h-40v-42.4c0-40 32.8-72.8 72.8-72.8H624c40 0 72.8 32.8 72.8 72.8v48.8h-41.6z" fill="" /></svg></button></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

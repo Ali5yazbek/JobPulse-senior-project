@@ -1,0 +1,157 @@
+.page1{
+  direction: ltr;
+  width: auto;
+
+
+  }
+  .logMain{
+    width: 50%;
+
+    margin-left: 3%;
+    height: 90vh;
+  }
+ .logMain
+  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+  
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+
+  #forgetLink
+  {
+    text-decoration: none;
+    margin-top: 5px;
+  width: 143px;
+  height: 44px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  color:#ffffff;
+  background-color: #4E60FF;
+  }
+
+  .logo1{
+    width: 79px;
+    height: 40px;
+    margin-top: 20px;
+
+  }
+
+  .logoText{
+  width: 350px;
+  height: 44px;
+  color: #2B2B43;
+  margin-top: 128px;
+
+  }
+  .textLog{
+    width: 350px;
+    height: 40px;
+    margin-top: 210;
+
+  }
+  form{
+    width: 350px;
+    height: 84px;
+    margin-top: 250;
+
+  }
+  div .EP{
+    margin-top: 32px;
+  }
+  form button{
+  color: #ffffff;
+  background-color: #00b4d8;
+  border-radius: 8px;
+  width: 350px;
+  height: 44px;
+  margin-top:60px;
+  }
+  form #l1{
+    width: 350px;
+    height: 16px;
+  }
+  .inputLog{
+    width: 350px;
+    height: 44px;
+    border-radius: 8px;
+  }
+  #forgetLink{
+    margin-top: 16px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+  }
+  #signUpP{
+  margin-top: 94px;
+  width: 350px;
+
+  }
+  .decoret{
+  height: 100vh;
+  width: 835px;
+  }
+
+  /* #img2{
+    position: relative;
+    top: 30px;
+    width: 350px;
+    z-index: 1;
+  }
+  #img3{
+    position: relative;
+    top: 350px;
+    left: 650px;
+    z-index: 100;
+  } */
+
+  @media screen and (max-width: 1420px){
+  .decoret{
+    display: none;
+  }
+  .page1{
+    display: flex;
+    justify-content: center;
+
+  }
+  .logMain{
+    margin-right: 0px;
+  }
+
+    }
+  .page2{
+    direction: rtl;
+    display: flex;
+    justify-content: space-around;
+  }
+  .page2 label{
+    text-align: right;
+
+  }
+  .page3{
+  margin-right: 10%;
+
+  }
+  .moving{
+    border: 0px;
+    background-color: rgb(203, 202, 202);
+    border-radius: 4px;
+    color: black;
+    margin-right: 1%;
+  }
+
+  .error-message {
+    color: #DB4444; /* Red text color for error messages */
+    font-size: 12px;
+    margin-top: 5px;
+  max-width: 400px;
+  }

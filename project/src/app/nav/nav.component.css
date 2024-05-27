@@ -1,0 +1,10 @@
+li{
+  font-size: Nunito;;
+}
+
+.navbar-expand-lg{
+  width: 100%;
+  justify-content: space-between;
+  height: 80px;
+
+}

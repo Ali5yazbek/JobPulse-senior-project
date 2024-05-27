@@ -1,0 +1,12 @@
+
+
+
+<div class="category" style="display:flex; flex-direction: column; flex-wrap: nowrap; align-items: center; justify-content: center; overflow-x: auto; margin-left: 0px; padding: 0px;">
+<h2 style="margin-bottom: 2%;">Category List</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
+  <div *ngFor="let i of array1" class="typeCategory">
+  <img src="{{i.path}}" alt="" (click)="moveTo(i.id)">
+  <p (click)="moveTo(i.id)">{{i.name}}</p>
+</div>
+</div>
+</div>

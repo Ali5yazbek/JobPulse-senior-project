@@ -1,0 +1,62 @@
+<app-nav-company></app-nav-company>
+<div  style="display: flex; justify-content: space-around; align-items: center; margin-top: 5%;">
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="main">
+  <label for=""><h2>Job</h2></label>
+<div class="row">
+<div class="col">
+  <label for="">Title</label>
+  <br>
+  <input type="text" formControlName="title">
+</div>
+<div class="col">
+  <label for="">Location</label>
+  <br>
+  <input type="text" formControlName="location">
+</div>
+</div>
+<div class="row">
+  <div class="col">
+    <label for="">skills</label>
+    <br>
+    <input type="text" formControlName="skills">
+  </div>
+  <div class="col">
+    <label for="">Salary</label>
+    <br>
+    <input type="text" formControlName="salary">
+  </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="">Time</label>
+      <br>
+      <input type="text" formControlName="time">
+    </div>
+    <div class="col">
+      <label for="">Discription</label>
+      <br>
+      <textarea formControlName="description"></textarea>
+    </div>
+    </div>
+    <div class="row" style="margin-bottom: 10px;">
+      <div class="col">
+        <select name="category" id="c" formControlName="category_id">
+          <option value="1">CS</option>
+          <option value="2">crypto</option>
+          <option value="3">Graphic</option>
+          <option value="4">engeering</option>
+        </select>
+      </div>
+    </div>
+<div class="row">
+  <div class="col">
+    <button  style="width: 72px;" class="btn btn-danger">Close</button>
+  </div>
+<div class="col">
+  <button type="submit"  style="width: 72px;"  class="btn btn-primary">Submit</button>
+</div>
+
+</div>
+</form>
+<img src="../../assets/images/icon2-removebg-preview.png" width="400px" height="300px" alt="">
+</div>

@@ -1,0 +1,86 @@
+<app-nav-amin></app-nav-amin>
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+<h1 style="align-self: self-start;">Company Account:</h1>
+
+<table class="table table-success" style="border-radius: 8px;">
+  <thead>
+    <tr>
+      <th scope="col">#ID</th>
+      <th scope="col">email</th>
+      <th scope="col">name</th>
+      <th scope="col">phone Number</th>
+      <th scope="col">Remove</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of informationCompany">
+      <th scope="row">{{i.company_id}}</th>
+      <td>{{i.email}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.phone}}</td>
+      <td><button (click)="deleteCompany(i.company_id)" class="btn" style="border: 0px; border-radius: 8px;" ><svg width="24px" height="24px" viewBox="0 0 1024 1024" fill="#000000" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M32 241.6c-11.2 0-20-8.8-20-20s8.8-20 20-20l940 1.6c11.2 0 20 8.8 20 20s-8.8 20-20 20L32 241.6zM186.4 282.4c0-11.2 8.8-20 20-20s20 8.8 20 20v688.8l585.6-6.4V289.6c0-11.2 8.8-20 20-20s20 8.8 20 20v716.8l-666.4 7.2V282.4z" fill="" /><path d="M682.4 867.2c-11.2 0-20-8.8-20-20V372c0-11.2 8.8-20 20-20s20 8.8 20 20v475.2c0.8 11.2-8.8 20-20 20zM367.2 867.2c-11.2 0-20-8.8-20-20V372c0-11.2 8.8-20 20-20s20 8.8 20 20v475.2c0.8 11.2-8.8 20-20 20zM524.8 867.2c-11.2 0-20-8.8-20-20V372c0-11.2 8.8-20 20-20s20 8.8 20 20v475.2c0.8 11.2-8.8 20-20 20zM655.2 213.6v-48.8c0-17.6-14.4-32-32-32H418.4c-18.4 0-32 14.4-32 32.8V208h-40v-42.4c0-40 32.8-72.8 72.8-72.8H624c40 0 72.8 32.8 72.8 72.8v48.8h-41.6z" fill="" /></svg></button></td>
+      <!-- (click)="delete(i.job_id)" -->
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <h1 style="align-self: self-start;">User Account:</h1>
+
+  <table class="table table-success table-light" style="border-radius: 8px;">
+    <thead>
+      <tr>
+        <th scope="col">#ID</th>
+        <th scope="col">email</th>
+        <th scope="col">name</th>
+        <th scope="col">phone Number</th>
+        <th scopre="col">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of informationUser">
+        <th scope="row">{{i.userId}}</th>
+        <td>{{i.email}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.phoneNumber}}</td>
+        <td><button (click)="deleteUser(i.userId)" class="btn" style="border: 0px; border-radius: 8px;" ><svg width="24px" height="24px" viewBox="0 0 1024 1024" fill="#000000" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M32 241.6c-11.2 0-20-8.8-20-20s8.8-20 20-20l940 1.6c11.2 0 20 8.8 20 20s-8.8 20-20 20L32 241.6zM186.4 282.4c0-11.2 8.8-20 20-20s20 8.8 20 20v688.8l585.6-6.4V289.6c0-11.2 8.8-20 20-20s20 8.8 20 20v716.8l-666.4 7.2V282.4z" fill="" /><path d="M682.4 867.2c-11.2 0-20-8.8-20-20V372c0-11.2 8.8-20 20-20s20 8.8 20 20v475.2c0.8 11.2-8.8 20-20 20zM367.2 867.2c-11.2 0-20-8.8-20-20V372c0-11.2 8.8-20 20-20s20 8.8 20 20v475.2c0.8 11.2-8.8 20-20 20zM524.8 867.2c-11.2 0-20-8.8-20-20V372c0-11.2 8.8-20 20-20s20 8.8 20 20v475.2c0.8 11.2-8.8 20-20 20zM655.2 213.6v-48.8c0-17.6-14.4-32-32-32H418.4c-18.4 0-32 14.4-32 32.8V208h-40v-42.4c0-40 32.8-72.8 72.8-72.8H624c40 0 72.8 32.8 72.8 72.8v48.8h-41.6z" fill="" /></svg></button></td>
+        <!-- (click)="delete(i.job_id)" -->
+      </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h1 style="align-self: self-start;">Jobs :</h1>
+  <table class="table table-success table-primay" style="border-radius: 8px;">
+    <thead>
+      <tr>
+        <th scope="col">#ID</th>
+        <th scope="col">job name</th>
+        <th scope="col">Salary</th>
+        <th scopre="col">Post Date</th>
+        <th scopre="col">Location</th>
+        <th scope="col">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of job">
+        <th scope="row">{{i.job_id}}</th>
+        <td>{{i.title}}</td>
+        <td>{{i.salary}} $</td>
+        <td>{{i.postDate}}</td>
+        <td>{{i.location}}</td>
+
+        <td>
+          <button class="btn btn-primary" style="border: 0px; border-radius: 8px;" (click)="updateStatus(i.job_id)">Accept</button>
+          <button class="btn btn-danger" style="border: 0px; border-radius: 8px;" (click)="delete(i.job_id)">Reject</button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

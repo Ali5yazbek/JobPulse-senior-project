@@ -1,0 +1,81 @@
+<app-nav></app-nav>
+<div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; margin-top: 10%;">
+
+
+<div>
+<div class="personalMain">
+ <h1>Apply For Job</h1>
+<!-- <form style="margin-top: 16px;" action="" >
+<div class="row">
+<div class="col-12">
+  <label class="labelInfo" for="" >Name</label>
+  <br>
+  <input class="input1" type="text" name="name">
+</div>
+<div class="col-12">
+  <label class="labelInfo" for="">Upload CV</label>
+  <br>
+  <input type="file" id="myFile" name="filename">
+</div>
+</div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 5px;">
+      <div style="margin-top: 5px;">
+
+        <button class="discardChangesButton">Discard</button>
+      </div>
+    <button    class="saveChangeButton">Apply</button>
+    </div>
+</form> -->
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()"  class="main">
+  <!-- <label for=""><h2>Job</h2></label> -->
+<div class="row">
+<div class="col">
+  <label  for="">Name</label>
+  <br>
+  <input class="input1" type="text" formControlName="userName">
+</div>
+<div class="col">
+  <label for="">job title:</label>
+  <br>
+  <input class="input1" type="text" formControlName="jobName">
+</div>
+</div>
+<div class="row">
+  <div class="col">
+    <label for="">phone</label>
+    <br>
+    <input class="input1" type="text" formControlName="phone">
+  </div>
+  <div class="col">
+    <label for="">email</label>
+    <br>
+    <input class="input1" type='text' formControlName="email">
+  </div>
+  </div>
+  <div class="row">
+    <!-- <div class="col">
+      <label for="">Description</label>
+      <br>
+      <textarea formControlName="Description"></textarea>
+    </div> -->
+    <div class="col">
+      <label for="">Discription</label>
+      <br>
+      <textarea class="input1" formControlName="Description"></textarea>
+    </div>
+    </div>
+<div class="row">
+  <div class="col">
+    <button class="discardChangesButton" style="width: 72px;">Close</button>
+  </div>
+<div class="col">
+  <button class="saveChangeButton" type="submit"  style="width: 72px; margin-top: 5px; margin-bottom: 5px;">Submit</button>
+</div>
+
+</div>
+</form>
+</div>
+</div>
+<img src="../../assets/images/icon3-removebg-preview.png" width="400px" height="300px" alt="">
+</div>

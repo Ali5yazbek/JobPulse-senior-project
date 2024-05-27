@@ -1,0 +1,27 @@
+.ss{
+  color: #2B2B43;
+   font-size: 20px;
+   font-family: Nunito;
+   font-weight: 600;
+   line-height: 28px;
+   letter-spacing: 0.10px;
+   word-wrap: break-word
+  }
+
+  #main{
+    display: grid;
+     grid-template-columns: 20% 60% 20%;
+  }
+
+  @media (max-width: 720px){
+    #main{
+      grid-template-columns: 0% 100% 0%;
+    }
+    }
+    .page1{
+      direction: ltr;
+     }
+     .page2{
+       direction: rtl;
+     }
+
